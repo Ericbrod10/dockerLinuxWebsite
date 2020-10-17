@@ -6,3 +6,4 @@
 * rnunes101720
   * added document with tutorial screenshots
   * created index.html page with sections for each page / aspect of the project
+  * created dockerServer.html page which will host apache tutorial
