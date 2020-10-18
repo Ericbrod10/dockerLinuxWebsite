@@ -54,11 +54,29 @@
             you through all other required steps.
         </p>
         <h3><strong>Tutorial</strong></h3>
-        <h4><strong>Step 1)</strong> Install Ubuntu</h4>
+        <h4><strong>Step 1)</strong> Install and Launch Ubuntu</h4>
+        <p>
+            To install Ubuntu run the "<strong>docker pull ubuntu</strong>" command as seen below.
+        </p>
+        <img src="Assets/installUbuntu.png">
+        <p class="mt-3">
+            This will pull the latest Ubuntu image from Docker and install a blank Ubuntu image within a new container image. The creation of this new image can be verified by running the "<strong>docker images</strong>" command seen below.
+        </p>
+        <img src="Assets/installVerification.png">
+        <p class="mt-3">
+            This command shows us all Docker images present but in this case we are specifically looking to verify the presence of the "<i>ubuntu</i>" Repository that has the "<i>latest</i>" Tag.
+        </p>
+        <p>
+            Finally, we can launch the newly created Ubuntu image via the "<strong>docker run -it ubuntu:latest /bin/bash</strong>" command below.
+        </p>
+        <img src="Assets/installLaunch.png">
+        <p class="mt-3">
+            This command will launch the newly created container image, ubuntu:latest (repository:tag), at the /bin/bash directory within the image.
+        </p>
+        <h4><strong>Step 2)</strong> Prepare and Install Apache</h4>
         <p>
 
         </p>
-
     </div>
 
 </div>
