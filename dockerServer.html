@@ -58,52 +58,65 @@
         <p>
             To install Ubuntu run the "<strong>docker pull ubuntu</strong>" command as seen below.
         </p>
-        <img src="Assets/installUbuntu.png">
+        <img src="Assets/installUbuntu.png" alt="">
         <p class="mt-3">
-            This will pull the latest Ubuntu image from Docker and install a blank Ubuntu image within a new container image. The creation of this new image can be verified by running the "<strong>docker images</strong>" command seen below.
+            This will pull the latest Ubuntu image from Docker and install a blank Ubuntu image within a new container
+            image. The creation of this new image can be verified by running the "<strong>docker images</strong>"
+            command seen below.
         </p>
-        <img src="Assets/installVerification.png">
+        <img src="Assets/installVerification.png" alt="">
         <p class="mt-3">
-            This command shows us all Docker images present but in this case we are specifically looking to verify the presence of the "<i>ubuntu</i>" Repository that has the "<i>latest</i>" Tag.
+            This command shows us all Docker images present but in this case we are specifically looking to verify the
+            presence of the "<i>ubuntu</i>" Repository that has the "<i>latest</i>" Tag.
         </p>
         <p>
-            Finally, we can launch the newly created Ubuntu image via the "<strong>docker run -it ubuntu:latest /bin/bash</strong>" command below.
+            Finally, we can launch the newly created Ubuntu image via the "<strong>docker run -it ubuntu:latest
+            /bin/bash</strong>" command below.
         </p>
-        <img src="Assets/installLaunch.png">
+        <img src="Assets/installLaunch.png" alt="">
         <p class="mt-3">
-            This command will launch the newly created container image, ubuntu:latest (repositoryName:tagName), at the /bin/bash directory within the image.
+            This command will launch the newly created container image, ubuntu:latest (repositoryName:tagName), at the
+            /bin/bash directory within the image.
         </p>
         <h4><strong>Step 2)</strong> Prepare and Install Apache</h4>
         <p>
-            Before we install Apache itself, we will want to make sure all of the packages pre-installed in the Ubuntu image are up to date. To do this, we will run the "<strong>apt-get update</strong>" command.
+            Before we install Apache itself, we will want to make sure all of the packages pre-installed in the Ubuntu
+            image are up to date. To do this, we will run the "<strong>apt-get update</strong>" command.
         </p>
-        <img src="Assets/ubuntuUpdate.png">
+        <img src="Assets/ubuntuUpdate.png" alt="">
         <p class="mt-3">
-            This will go through and automatically update any packages that need updates. Once that is complete, we can actually install the two packages we need. First will be "<strong>apt-get install apache2</strong>" command.
+            This will go through and automatically update any packages that need updates. Once that is complete, we can
+            actually install the two packages we need. First will be "<strong>apt-get install apache2</strong>" command.
         </p>
-        <img src="Assets/ubuntuApache.png">
+        <img src="Assets/ubuntuApache.png" alt="">
         <p class="mt-3">
             Next we will install the VIM text editor via the "<strong>apt-get install vim</strong>" command.
         </p>
-        <img src="Assets/ubuntuVIM.png">
+        <img src="Assets/ubuntuVIM.png" alt="">
         <p class="mt-3">
-           At this point, we now have all of the required tools to run our own webserver. If you would like to learn how to commit a snapshot of the environment as it exists as a separate container, please continue to read the <strong><i>Optional</i></strong> section below. If you would like to continue on without this, please proceed to <strong><i>Step 3</i></strong>.
+            At this point, we now have all of the required tools to run our own webserver. If you would like to learn
+            how to commit a snapshot of the environment as it exists as a separate container, please continue to read
+            the <strong><i>Optional</i></strong> section below. If you would like to continue on without this, please
+            proceed to <strong><i>Step 3</i></strong>.
         </p>
         <p>
             Whichever path you prefer, type the <strong>exit</strong> command to continue.
         </p>
         <h5><strong>Optional)</strong> Commit to a New Docker Image</h5>
         <p>
-            To commit your <i>ubuntu</i> repository to a new image, you will want to first verify the current image <i>Container ID</i>. To this do, run the "<strong>docker ps -a</strong>" command.
+            To commit your <i>ubuntu</i> repository to a new image, you will want to first verify the current image <i>Container
+            ID</i>. To this do, run the "<strong>docker ps -a</strong>" command.
         </p>
-        <img src="Assets/dockerVerify.png">
+        <img src="Assets/dockerVerify.png" alt="">
         <p class="mt-3">
-            In the example above, the <i>Container ID</i> is 6ab705341f04. We can now run the following command to create a new repository:
+            In the example above, the <i>Container ID</i> is 6ab705341f04. We can now run the following command to
+            create a new repository:
             <br>"<strong>docker commit [containerID] [repositoryName]</strong>"
         </p>
-        <img src="Assets/dockerCommit.png">
+        <img src="Assets/dockerCommit.png" alt="">
         <p class="mt-3">
-            In the example above, the <i>Container ID</i> is still <strong>6ab705341f04</strong> and the new <i>Repository Name</i> is <strong>ubuntu-my_apache2</strong>.
+            In the example above, the <i>Container ID</i> is still <strong>6ab705341f04</strong> and the new <i>Repository
+            Name</i> is <strong>ubuntu-my_apache2</strong>.
         </p>
 
         <h4><strong>Step 3)</strong> Mount a Local Storage Location to Docker Image </h4>
@@ -111,18 +124,23 @@
             To mount a local storage location to your Ubuntu container, you will want to run the following command:
         </p>
         <p>
-            "<strong>docker run -it -p 127.0.0.1:80:80 -v [localFilePath]:/var/www/html [repositoryName] /bin/bash</strong>"
+            "<strong>docker run -it -p 127.0.0.1:80:80 -v [localFilePath]:/var/www/html [repositoryName]
+            /bin/bash</strong>"
         </p>
         <p>
-            As you may notice, there are two very important parameters in the command that are within brackets, [], labeled <i>localFilePath</i> and <i>repositoryName</i>. These variables will be dependant on your local file system and the Docker repository name that you have chosen.
+            As you may notice, there are two very important parameters in the command that are within brackets, [],
+            labeled <i>localFilePath</i> and <i>repositoryName</i>. These variables will be dependant on your local file
+            system and the Docker repository name that you have chosen.
         </p>
         <p>
-            If you have not completed the <strong><i>Optional</i></strong> step in <strong><i>Step 2</i></strong>, your repository name will be <strong>ubuntu</strong>.
+            If you have not completed the <strong><i>Optional</i></strong> step in <strong><i>Step 2</i></strong>, your
+            repository name will be <strong>ubuntu</strong>.
         </p>
         <p>
-            If you have completed the <strong><i>Optional</i></strong> step in <strong><i>Step 2</i></strong>, you will want to use your new <i>Repository Name</i>.
+            If you have completed the <strong><i>Optional</i></strong> step in <strong><i>Step 2</i></strong>, you will
+            want to use your new <i>Repository Name</i>.
         </p>
-        <img src="Assets/apacheMount.png">
+        <img src="Assets/apacheMount.png" alt="">
         <p class="mt-3">
             In the example command above, the important variables are as follows:
             <br><strong>localFilePath: </strong><i>C:\Users\rnunes\Documents\NJIT\IS601\DockerFolder</i>
@@ -130,42 +148,52 @@
         </p>
         <h4><strong>Step 4)</strong> Add Your HTML Files and Start Server </h4>
         <p>
-            At this point you can add HTML files to your local storage location using any type of file explorer. Once HTML files are present on your local storage location folder, you can run the following command to start your Apache Webserver: <strong>"service apache2 start"</strong>
+            At this point you can add HTML files to your local storage location using any type of file explorer. Once
+            HTML files are present on your local storage location folder, you can run the following command to start
+            your Apache Webserver: <strong>"service apache2 start"</strong>
         </p>
-        <img src="Assets/apacheStart.png">
+        <img src="Assets/apacheStart.png" alt="">
         <p class="mt-3">
-            Now you can open a web browser on your local machine and navigate to <i>127.0.0.1</i> (your local host) to verify everything is running.
+            Now you can open a web browser on your local machine and navigate to <i>127.0.0.1</i> (your local host) to
+            verify everything is running.
         </p>
 
         <h5><strong>Optional)</strong> Create a Sample Index.html File</h5>
         <p>
-            Optionally, if you do now yet have any HTML files but would like to verify that your Apache Webserver is running, we can create a temporary <i>index.html</i> file.
+            Optionally, if you do now yet have any HTML files but would like to verify that your Apache Webserver is
+            running, we can create a temporary <i>index.html</i> file.
         </p>
         <p>
             First, navigate to the appropriate file location with the "<strong>cd /var/www/html/</strong>" command.
         </p>
-        <img src="Assets/viNavigation.png">
+        <img src="Assets/viNavigation.png" alt="">
         <p class="mt-3">
-            Now that we are in the appropriate location, we can open the VIM text editor with the "<strong>vi index.html</strong>" command.
+            Now that we are in the appropriate location, we can open the VIM text editor with the "<strong>vi
+            index.html</strong>" command.
         </p>
-        <img src="Assets/viOpen.png">
+        <img src="Assets/viOpen.png" alt="">
         <p class="mt-3">
-            Press the "<strong><i>i</i></strong>" key to enter <i>Insert Mode</i>. You should see "<i>-- INSERT --</i>" across the bottom of the screen. Once in <i>Insert Mode</i>, you can now enter the following HTML code.
+            Press the "<strong><i>i</i></strong>" key to enter <i>Insert Mode</i>. You should see "<i>-- INSERT --</i>"
+            across the bottom of the screen. Once in <i>Insert Mode</i>, you can now enter the following HTML code.
         </p>
-        <img src="Assets/sampleHTML.png">
+        <img src="Assets/sampleHTML.png" alt="">
         <p class="mt-3">
-            Feel free to change the <strong>title</strong> and <strong>h1</strong> text anything you desire. Whenever the file is complete, press the "<strong><i>ESC</i></strong>" key to exit <i>Insert Mode</i>. Type "<strong>:wq</strong>" to write to file and quit the VIM editor.
+            Feel free to change the <strong>title</strong> and <strong>h1</strong> text anything you desire. Whenever
+            the file is complete, press the "<strong><i>ESC</i></strong>" key to exit <i>Insert Mode</i>. Type "<strong>:wq</strong>"
+            to write to file and quit the VIM editor.
         </p>
         <p>
             You can run the following command to start your Apache Webserver: <strong>"service apache2 start"</strong>
         </p>
-        <img src="Assets/apacheStart.png">
+        <img src="Assets/apacheStart.png" alt="">
         <p class="mt-3">
-            Now you can open a web browser on your local machine and navigate to <i>127.0.0.1</i> (your local host) to verify everything is running.
+            Now you can open a web browser on your local machine and navigate to <i>127.0.0.1</i> (your local host) to
+            verify everything is running.
         </p>
-        <img src="Assets/sampleWebPage.png">
+        <img src="Assets/sampleWebPage.png" alt="">
         <p class="mt-3">
-            If you need to update your <i>index.html</i> file you should be able to open the locally saved file using any editor like <i>NotePad++</i>.
+            If you need to update your <i>index.html</i> file you should be able to open the locally saved file using
+            any editor like <i>NotePad++</i>.
         </p>
 
     </div>
