@@ -4,6 +4,8 @@
 
 ## Changelog
 * rnunes101720
-  * added document with tutorial screenshots
-  * created index.html page with sections for each page / aspect of the project
-  * created dockerServer.html page which will host apache tutorial
+  * Added a Word document with tutorial screenshots
+  * Created the index.html page with sections for each page / aspect of the project
+  * Created the dockerServer.html page which will host apache tutorial
+* rnunes101820
+  * Wrote up and uploaded the Docker Webserver tutorial for the dockerServer.html page
