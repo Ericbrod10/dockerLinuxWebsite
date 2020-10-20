@@ -1,6 +1,6 @@
 # Docker / Linux Website
 
-[Project Homepage](https://rn44.github.io/dockerLinuxWebsite/)
+[Project Homepage](https://rn44.github.io/dockerLinuxWebsite/index.html)
 
 ## Changelog
 * rnunes101720
