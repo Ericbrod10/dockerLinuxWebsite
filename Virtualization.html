@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Required Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a brief history of the Internet for a school project">
+    <!--Bootstrap Tags-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Title in Browser-->
+    <title>Containerization and Linux</title>
+</head>
+<body>
+
+<!--Main Page Container-->
+<div class="container">
+    <!--Header Bar-->
+    <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+                <a class="text-muted" href="index.html">Home</a>
+            </div>
+            <div class="col-4 text-center">
+                <h1>Containerization</h1>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="text-muted" href=https://njit.instructure.com/courses/12731 target="_blank">IS 601</a>
+            </div>
+        </div>
+    </header>
+    <!--Nav Bar-->
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            <a class="p-2 text-muted" href="comparison.html">Virtual vs. Container</a>
+            <a class="p-2 text-muted" href="dockerServer.html">Docker Servers</a>
+            <a class="p-2 text-muted" href="linux.html">Linux Commands</a>
+            <a class="p-2 text-muted" href="dockerPyCharm.html">Connecting PyCharm</a>
+        </nav>
+    </div>
+
+    <!--Page Content Container-->
+    <div class="container">
+        <h2>Virtualization</h2>
+        <p>Virtualization in essence creates an internal computer system. The virtualization layer creates virtual hardware for virtual machine (VM), this is essential since VMs need all of the components (like storage, a CPU, a GPU, RAM and more) that regular computer need.  The virtualization layer does this by taking those physical resources and turns them into virtual resources for the VM. Many virtual machines (VM) and be created on a single host computer.</p>
+
+        <p>The benefits of this technology are it allows users to optimize and utilize resources to their fullest extent. Another benefit would be manageability, where a user has the ability to move, clone and isolate VMs. This is hand for if a user needs to set up five VMs all with a specific type of software, the user would essentially have to set up a single VM and clone it four times. </p>
+
+        <p>In addition to manageability, sustainability is another bonus for using VMs, VMs contribute to sustainability by allowing for full utilization of hardware and helping with energy savings, which can reduce the number of physical computers needed. The last benefit of VMs is that they enhance security by having isolation between VMs so if one VM is compromised by either a software bug or a third party with malicious intent, they would only have access to the single VM and not the entire system. </p>
+        <img src="Assets/Virtualization.jpg" alt="">
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
