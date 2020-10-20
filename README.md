@@ -9,6 +9,8 @@
   * Created the dockerServer.html page which will host apache tutorial
 * rnunes101820
   * Wrote up and uploaded the Docker Webserver tutorial for the dockerServer.html page
+* rnunes102020
+  * Wrote up and uploaded the Docker PyCharm tutorial for the dockerPyCharm.html page
 
 * ericbrod10101920
   * Added Containerization Page and adjusted links
