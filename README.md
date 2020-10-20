@@ -13,4 +13,5 @@
 * ericbrod10101920
   * Added Containerization Page and adjusted links
   * Added Virtualization Page and adjusted links
+  * Added Page for Containerization Vs Virtualization Comparison and adjusted links
   
