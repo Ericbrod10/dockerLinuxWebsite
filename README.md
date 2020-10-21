@@ -20,3 +20,4 @@
 * ericbrod10102020  
   * Added Comparison content
   * Added Additional content to the Containerization page
+  * Fixed formatting issue on comparison page
